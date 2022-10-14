@@ -1,0 +1,68 @@
+
+<body
+    background="https://www.comunidadbaratz.com/wp-content/uploads/La-biblioteca-es-inclusion-social-e-igualdad-de-oportunidades.jpg">
+
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+                    <div class="card" style="border-radius: 1rem;">
+                        <div class="row g-0">
+                            
+                            <div class="align-items-center">
+                                <div class="card-body p-4 p-lg-5 text-black">
+
+                                    <form [formGroup]="login" (ngSubmit)="iniciar()" class="user">
+
+                                        <div class="d-flex align-items-center mb-3 pb-1">
+                                            <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                            <span class="h1 fw-bold mb-0">Iniciar Sesión</span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" id="usuario" placeholder="Ingrese su Usuario"
+                                                formControlName="usuario" class="form-control form-control-user" />
+                                            <span *ngIf="login.get('usuario')?.invalid && login.get('usuario')?.touched"
+                                                class="text-danger">
+                                                *El <strong>Usuario</strong> es un campo requerido
+                                            </span>
+                                            <label class="form-label" for="usuario">&nbsp; Usuario</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" id="password" placeholder="Ingrese su Contraseña"
+                                                formControlName="password" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="login.get('password')?.invalid && login.get('password')?.touched"
+                                                class="text-danger">
+                                                *La <strong>Contraseña</strong> es un campo requerido
+                                            </span>
+                                            <label class="form-label" for="password">&nbsp;Password</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-primary "
+                                                    [disabled]="login.invalid" >Login</button>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <br>
+
+                                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Si no tienes una cuenta... <br><a
+                                                routerLink="/registrarUsuario" class="btn btn-success">Register here</a></p>
+                                        
+                                    </form>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</body>

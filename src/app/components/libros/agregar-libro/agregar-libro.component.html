@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+<body
+    background="https://www.comunidadbaratz.com/wp-content/uploads/La-biblioteca-es-inclusion-social-e-igualdad-de-oportunidades.jpg">
+
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+                    <div class="card" style="border-radius: 1rem; max-height: 500px; overflow: scroll;">
+                        <div class="row g-0">
+
+                            <div class="align-items-center">
+                                <div class="card-body p-4 p-lg-5 text-black">
+
+                                    <form [formGroup]="registroLibro" (ngSubmit)="registrarLibro()" class="user">
+
+                                        <div class="d-flex align-items-center mb-3 pb-1">
+                                            <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                            <span class="h1 fw-bold mb-0">Registrar Nuevo Libro</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" id="isbn"
+                                                placeholder="Ingrese el ISBN del libro"
+                                                formControlName="isbn"
+                                                class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registroLibro.get('isbn')?.invalid && registroLibro.get('isbn')?.touched"
+                                                class="text-danger">
+                                                *El <strong>ISBN</strong> es un campo requerido
+                                            </span>
+                                            <label class="form-label" for="isbn">&nbsp; ISBN del libro</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="titulo" placeholder="Ingrese el Titulo del Libro"
+                                                formControlName="titulo" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registroLibro.get('titulo')?.invalid && registroLibro.get('titulo')?.touched"
+                                                class="text-danger">
+                                                *El <strong>titulo</strong> es un campo requerido
+                                            </span>
+                                            <label class="form-label" for="titulo">&nbsp; Titulo del Libro</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="autor" placeholder="Ingrese el Autor del Libro"
+                                                formControlName="autor" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registroLibro.get('autor')?.invalid && registroLibro.get('autor')?.touched"
+                                                class="text-danger">
+                                                *El <strong>autor</strong> es un campo requerido
+                                            </span>
+                                            <label class="form-label" for="autor">&nbsp; Autor del Libro</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" id="editorial" placeholder="Ingrese Editorial del Libro"
+                                                formControlName="editorial" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registroLibro.get('editorial')?.invalid && registroLibro.get('editorial')?.touched"
+                                                class="text-danger">
+                                                *El <strong>editorial</strong> es un campo requerido
+                                            </span>
+                                            <label class="form-label" for="editorial">&nbsp; Editorial del Libro</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="date" id="fechaPublicacion"
+                                                
+                                                formControlName="fechaPublicacion" class="form-control form-control-user" />
+                                            <span
+                                                *ngIf="registroLibro.get('fechaPublicacion')?.invalid && registroLibro.get('fechaPublicacion')?.touched"
+                                                class="text-danger">
+                                                *La <strong>fechaPublicacion</strong> es un campo requerido
+                                            </span>
+                                            <label class="form-label" for="fechaPublicacion">&nbsp;Fecha de publicación del Libro</label>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-success"
+                                                    [disabled]="registroLibro.invalid">Registro</button>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <br>
+
+                                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Si no tienes una cuenta...
+                                            <br><a routerLink="/" class="btn btn-primary">Iniciar Sesión</a></p>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</body>

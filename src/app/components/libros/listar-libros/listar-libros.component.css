@@ -1,0 +1,34 @@
+
+@media screen and (max-width: 768px){}
+.signup-content, .signin-content {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+}
+.signin-content {
+    padding-top: 67px;
+    padding-bottom: 87px;
+}
+display-flex, .display-flex, .display-flex-center, .signup-content, .signin-content, .social-login, .socials {
+    display: flex;
+    display: -webkit-flex;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #222;
+    background: #f8f8f8;
+    font-weight: 400;
+    font-family: Poppins;
+}

@@ -1,36 +1,25 @@
 <app-navbar></app-navbar>
 
 
-<div class="container p-4">
-    <div class="card text-center">
-        <div class="card-header">
-            <h3 class="card-title text-uppercase">Listado De Libros Registrados</h3>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>ISBN</th>
-                            <th>TITULO</th>
-                            <th>AUTOR</th>
-                            <th>EDITORIAL</th>
-                            <th>FECHA DE PUBLICACIÓN</th>
-                            <th>ACCIONES</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-
-                        
-
-                    </tbody>
-                </table>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 mx-auto my-5" *ngFor="let libro of listarLibros">
+        <div  class="card text-center">
+            <div class="card-header">
+                <h3 class="card-title text-uppercase">{{libro.titulo}}</h3>
+                <h6>{{libro.isbn}}</h6>
             </div>
+            <div class="card-body">
+                <h3>{{libro.autor}}</h3> </div>
+            <div class="card-footer">
+                <h5>{{libro.editorial}}</h5>
+                <h5>{{libro.fechaPublicacion}}</h5>
+            </div>
+            <hr>
         </div>
-        <div class="card-footer">
-        </div>
+        
     </div>
+    </div>
+    
+
 </div>

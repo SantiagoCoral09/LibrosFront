@@ -11,6 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MostrarLibrosComponent } from './components/usuarios/mostrar-libros/mostrar-libros.component';
 import { RegistrarUsuarioComponent } from './components/usuarios/registrar-usuario/registrar-usuario.component';
 import { ListarUsuariosComponent } from './components/usuarios/listar-usuarios/listar-usuarios.component';
+import { ListarPrestamosComponent } from './components/libros/listar-prestamos/listar-prestamos.component';
+import { RegistrarPrestamoComponent } from './components/libros/registrar-prestamo/registrar-prestamo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ListarUsuariosComponent } from './components/usuarios/listar-usuarios/l
     NavbarComponent,
     MostrarLibrosComponent,
     RegistrarUsuarioComponent,
-    ListarUsuariosComponent
+    ListarUsuariosComponent,
+    ListarPrestamosComponent,
+    RegistrarPrestamoComponent
   ],
   imports: [
     BrowserModule,

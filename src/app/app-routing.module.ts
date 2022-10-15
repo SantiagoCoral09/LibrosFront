@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AgregarLibroComponent } from './components/libros/agregar-libro/agregar-libro.component';
 import { ListarLibrosComponent } from './components/libros/listar-libros/listar-libros.component';
+import { ListarPrestamosComponent } from './components/libros/listar-prestamos/listar-prestamos.component';
 import { LoginComponent } from './components/login/login.component';
 import { ListarUsuariosComponent } from './components/usuarios/listar-usuarios/listar-usuarios.component';
 import { MostrarLibrosComponent } from './components/usuarios/mostrar-libros/mostrar-libros.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'agregarLibro', component: AgregarLibroComponent},
   {path:'listarLibros', component: ListarLibrosComponent},
   {path:'listarUsuarios', component: ListarUsuariosComponent},
+  {path:'listarPrestamos', component: ListarPrestamosComponent},
 
   {path:'**',redirectTo:'',pathMatch:'full'}
 
